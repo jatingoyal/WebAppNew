@@ -1,0 +1,13 @@
+﻿@page
+@model WebApp.Pages.Directory.FilesModel
+@{
+}
+
+    <div class="jumbotron">
+        <h1>@Model.Folder</h1>
+        @foreach (var file in Model.Files)
+        {
+            <p><a href='@string.Format("/File/Download/{0}",file.Id)'>@file.Name</a></p>
+        }
+
+    </div>

@@ -1,0 +1,13 @@
+﻿@page
+@model WebApp.Pages.Directory.FoldersModel
+@{
+}
+
+<div class="jumbotron">
+    <h1>Folders</h1>
+    @foreach (var folder in Model.Folders)
+    {
+        <p><a asp-page="/Directory/Files" asp-route-folder=@folder.Id class="nav-link"> @folder.Id</a></p>
+    }
+
+</div>
